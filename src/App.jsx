@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
 function App() {
@@ -8,26 +7,35 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+     <header>
+    <h1>Shopping Cart</h1>
+  </header>
+  <main>
+    <section class="products">
+      <h2>Products</h2>
+      <div class="product">
+        <span>Product 1</span>
+        <button onclick="addToCart('Product 1', 10.99)">Add to Cart - $10.99</button>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div class="product">
+        <span>Product 2</span>
+        <button onclick="addToCart('Product 2', 15.99)">Add to Cart - $15.99</button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div class="product">
+        <span>Product 3</span>
+        <button onclick="addToCart('Product 3', 8.99)">Add to Cart - $8.99</button>
+      </div>
+    </section>
+
+    <section class="cart">
+      <h2>Shopping Cart</h2>
+      <div id="cart-items">
+        <p>Your cart is empty.</p>
+      </div>
+      <div class="total" id="total-price">Total: $0.00</div>
+      <button class="checkout" onclick="checkout()">Checkout</button>
+    </section>
+  </main>
     </>
   )
 }
