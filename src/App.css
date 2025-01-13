@@ -15,22 +15,18 @@ main {
   margin: 20px;
   gap: 20px;
 }
-.products, .cart {
-  flex: 1;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+
 h2 {
   margin-top: 0;
 }
 .product {
-  display: flex;
+  display: block;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
+  padding: 0px 0;
+}
+.product h2{
+  color:#0731b9
 }
 .product:last-child {
   border-bottom: none;
@@ -105,4 +101,106 @@ main {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 1200px; /* Limitar el ancho máximo del main */
   width: 100%;
+}
+.product-list {
+  display: flex;
+  flex-direction: column; /* Organizar los productos en columna */
+  gap: 20px; /* Espaciado entre los productos */
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 600px; /* Ajustar el ancho máximo para centrar */
+}
+
+.product {
+  display: flex;
+  flex-direction: column; /* Asegurar que los elementos dentro del producto estén en columna */
+  align-items: flex-start; /* Alinear los elementos al inicio */
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product span {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Espaciado debajo del nombre del producto */
+}
+
+.product button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.product button:hover {
+  background-color: #0056b3;
+}
+/* Estilos generales de la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Quita los espacios entre bordes */
+  margin: 20px 0;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  text-align: left;
+  background-color: #f9f9f9; /* Fondo claro */
+  border: 1px solid #ddd; /* Bordes suaves */
+}
+
+/* Estilo para las celdas del encabezado */
+thead th {
+  background-color: #007bff; /* Fondo azul */
+  color: white; /* Texto blanco */
+  padding: 12px;
+  text-transform: uppercase;
+}
+
+/* Estilo para las filas del cuerpo */
+tbody tr {
+  border-bottom: 1px solid #ddd; /* Línea divisoria */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Fondo alterno para filas pares */
+}
+
+tbody td {
+  padding: 10px; /* Espaciado interno */
+  vertical-align: middle; /* Centra el contenido verticalmente */
+}
+
+/* Estilo para los botones */
+button {
+  background-color: #007bff; /* Fondo azul */
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #0056b3; /* Fondo más oscuro al pasar el mouse */
+}
+
+button:active {
+  background-color: #003f7f; /* Fondo más oscuro al hacer clic */
+}
+
+button[type="button"]:last-child {
+  background-color: #dc3545; /* Fondo rojo para botón de eliminación */
+}
+
+button[type="button"]:last-child:hover {
+  background-color: #c82333; /* Fondo rojo más oscuro al pasar el mouse */
+}
+
+button[type="button"]:last-child:active {
+  background-color: #a71d2a; /* Fondo rojo más oscuro al hacer clic */
 }
